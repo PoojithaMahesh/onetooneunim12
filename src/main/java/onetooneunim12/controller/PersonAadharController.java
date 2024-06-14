@@ -26,13 +26,42 @@ public static void main(String[] args) {
 	
 	
 	
-	AadharCard aadharCard=new AadharCard();
-	aadharCard.setAadharCardId(103);
-	aadharCard.setName("FAHAR");
-	aadharCard.setAge(20);
 	
-	AadharCardDao aadharCardDao=new AadharCardDao();
-	aadharCardDao.saveAadharCard(3, aadharCard);
+	
+	
+	
+	
+	
+//	AadharCard aadharCard=new AadharCard();
+//	aadharCard.setAadharCardId(103);
+//	aadharCard.setName("FAHAR");
+//	aadharCard.setAge(20);
+//	
+//	AadharCardDao aadharCardDao=new AadharCardDao();
+//	aadharCardDao.saveAadharCard(3, aadharCard);
+	
+	
+//	UPDATE THE AADharcard
+//	AadharCard aadharCard=new AadharCard();
+//	aadharCard.setName("FAHarAbc");
+//	aadharCard.setAge(21);
+//	
+//	AadharCardDao cardDao=new AadharCardDao();
+//	cardDao.updateAadharCard(103, aadharCard);
+	
+	
+//	Update the Person
+	
+	Person person=new Person();
+	person.setName("pooji");
+	person.setAddress("Mysorwe");
+	
+	
+	
+	
+	
+	PersonDao personDao=new PersonDao();
+	personDao.updatePerson(1, person);
 	
 	
 	

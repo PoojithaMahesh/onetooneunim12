@@ -33,4 +33,41 @@ public class AadharCardDao {
 		}
 	}
 	
+	
+	public void updateAadharCard(int aid,AadharCard aadharCard) {
+		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("vinod");
+		EntityManager entityManager=entityManagerFactory.createEntityManager();
+		AadharCard dbAadharCard=entityManager.find(AadharCard.class, aid);
+		if(dbAadharCard!=null) {
+//		aacard is present then you can update the adharcard
+			EntityTransaction entityTransaction=entityManager.getTransaction();
+			entityTransaction.begin();
+			aadharCard.setAadharCardId(aid);
+			entityManager.merge(aadharCard);
+			entityTransaction.commit();
+		}else {
+			System.out.println("Sorry adharcard id is not present");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
