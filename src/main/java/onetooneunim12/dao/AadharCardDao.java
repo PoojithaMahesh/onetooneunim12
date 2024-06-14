@@ -50,7 +50,17 @@ public class AadharCardDao {
 		}
 	}
 	
-	
+	public void findAadharCard(int aid) {
+		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("vinod");
+		EntityManager entityManager=entityManagerFactory.createEntityManager();
+		AadharCard dbAadharCard=entityManager.find(AadharCard.class, aid);
+		if(dbAadharCard!=null) {
+//			id is preseny
+			System.out.println(dbAadharCard);
+		}else {
+			System.out.println("Sorry id is not present");
+		}
+	}
 	
 	
 	

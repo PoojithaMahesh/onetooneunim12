@@ -35,4 +35,25 @@ public class PersonDao {
 			System.out.println("Sorry person Id is not present");
 		}
 	}
+	
+	public void findPerson(int personId) {
+		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("vinod");
+		EntityManager entityManager=entityManagerFactory.createEntityManager();
+		Person dbPerson=entityManager.find(Person.class, personId);
+		if(dbPerson!=null) {
+			System.out.println(dbPerson);
+		}else {
+			System.out.println("Sorry id is not present");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
