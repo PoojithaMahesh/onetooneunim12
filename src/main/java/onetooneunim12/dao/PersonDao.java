@@ -48,7 +48,19 @@ public class PersonDao {
 	}
 	
 	
-	
+	public void deletePerson(int personId) {
+		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("vinod");
+		EntityManager entityManager=entityManagerFactory.createEntityManager();
+		Person dbPerson=entityManager.find(Person.class, personId);
+		if(dbPerson!=null) {
+			EntityTransaction entityTransaction=entityManager.getTransaction();
+			entityTransaction.begin();
+			entityManager.remove(dbPerson);
+			entityTransaction.commit();
+		}else {
+			System.out.println("Sorry id is not present to delete");
+		}
+	}
 	
 	
 	

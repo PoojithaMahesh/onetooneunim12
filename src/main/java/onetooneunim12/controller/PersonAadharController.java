@@ -52,24 +52,31 @@ public static void main(String[] args) {
 	
 //	Update the Person
 	
-	Person person=new Person();
-	person.setName("pooji");
-	person.setAddress("Mysorwe");
+//	Person person=new Person();
+//	person.setName("pooji");
+//	person.setAddress("Mysorwe");
+//	
+//	
+//	
+//	
+//	
+//	PersonDao personDao=new PersonDao();
+//	personDao.updatePerson(1, person);
 	
 	
+//	Find 
+//	PersonDao personDao=new PersonDao();
+//	personDao.findPerson(1);
+//	AadharCardDao aadharCardDao=new AadharCardDao();
+//	aadharCardDao.findAadharCard(101);
 	
-	
+//	Delete
+//	AadharCardDao aadharCardDao=new AadharCardDao();
+//	aadharCardDao.deleteAadharCard(103);
+//	
 	
 	PersonDao personDao=new PersonDao();
-	personDao.updatePerson(1, person);
-	
-	
-	
-	
-	
-	
-	
-	
+	personDao.deletePerson(1);
 	
 }
 }
